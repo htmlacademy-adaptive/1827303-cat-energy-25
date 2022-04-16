@@ -1,20 +1,30 @@
 .page__body {
-  font-family: "Oswald";
+  font-family: "Oswald", "Helvetica", sans-serif;
   color: #000000;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 @font-face {
   font-family: "Oswald";
-  src: url("../../fonts/oswaldregular.woff2") format("woff2");
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("../../fonts/oswaldmedium.woff2") format("woff2");
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -122,7 +132,7 @@
   align-items: center;
   width: 280px;
   height: 40px;
-  font-family: "Oswald";
+  font-family: "Oswald", "Helvetica", sans-serif;
   color: #ffffff;
   background-color: #68b738;
   justify-content: center;
@@ -199,7 +209,7 @@
   text-transform: uppercase;
 }
 .info__text {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -243,7 +253,7 @@
   list-style-type: none;
 }
 .benefit__text {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -270,7 +280,7 @@
   background-color: #eaeaea;
 }
 .statistics__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -356,7 +366,7 @@
   margin: 0 auto;
 }
 .main-footer__logo-academy-name {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -400,7 +410,7 @@
   background-color: #ffffff;
 }
 .content__characteristic {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -408,7 +418,7 @@
   color: #444444;
 }
 .content__value {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -436,7 +446,7 @@
   background-color: #ffffff;
 }
 .content-all__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -467,7 +477,7 @@
   list-style-type: none;
 }
 .content-extra {
-  font-family: "Oswald";
+  font-family: "Oswald", "Helvetica", sans-serif;
   background-color: #ffffff;
 }
 .content-extra__title {
@@ -479,7 +489,7 @@
   color: #222222;
 }
 .content-extra__characteristic {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -489,7 +499,7 @@
   background-color: #ffffff;
 }
 .content-extra__value {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -521,7 +531,7 @@
 }
 .gift__description {
   position: absolute;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -531,7 +541,7 @@
   z-index: 1;
 }
 .meal {
-  font-family: "Oswald";
+  font-family: "Oswald", "Helvetica", sans-serif;
   width: 320px;
 }
 .meal__wrapper-description {
@@ -632,7 +642,7 @@
   list-style-type: none;
 }
 .form__text-info {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
