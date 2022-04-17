@@ -1,5 +1,5 @@
 .page__body {
-  font-family: "Oswald", "Helvetica", sans-serif;
+  font-family: "Oswald";
   color: #000000;
   background-color: #ffffff;
   margin: 0;
@@ -82,13 +82,21 @@
   color: #000000;
 }
 .promo {
-  position: relative;
   width: 320px;
+}
+.promo__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+.promo__image-wrapper {
+  min-height: auto;
+  position: relative;
   background-image: url("../img/index/background-promo.png");
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 0;
 }
-.promo::after {
+.promo__image-wrapper::after {
   position: absolute;
   content: "";
   background-color: rgba(104, 183, 56, 0.85);
@@ -96,30 +104,27 @@
   left: 0;
   right: 0;
   bottom: 0;
-}
-.promo__wrapper {
-  width: 280px;
-  margin: 0 auto;
+  z-index: 1;
 }
 .promo__title {
-  position: absolute;
+  position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 .promo__slogan {
-  position: absolute;
+  position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 .promo__product {
   object-fit: contain;
@@ -132,7 +137,8 @@
   align-items: center;
   width: 280px;
   height: 40px;
-  font-family: "Oswald", "Helvetica", sans-serif;
+  padding: 0;
+  font-family: "Oswald";
   color: #ffffff;
   background-color: #68b738;
   justify-content: center;
@@ -209,7 +215,7 @@
   text-transform: uppercase;
 }
 .info__text {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -253,7 +259,7 @@
   list-style-type: none;
 }
 .benefit__text {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -280,7 +286,7 @@
   background-color: #eaeaea;
 }
 .statistics__description {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -366,7 +372,7 @@
   margin: 0 auto;
 }
 .main-footer__logo-academy-name {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -410,7 +416,7 @@
   background-color: #ffffff;
 }
 .content__characteristic {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -418,7 +424,7 @@
   color: #444444;
 }
 .content__value {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -446,7 +452,7 @@
   background-color: #ffffff;
 }
 .content-all__description {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -477,7 +483,7 @@
   list-style-type: none;
 }
 .content-extra {
-  font-family: "Oswald", "Helvetica", sans-serif;
+  font-family: "Oswald";
   background-color: #ffffff;
 }
 .content-extra__title {
@@ -489,7 +495,7 @@
   color: #222222;
 }
 .content-extra__characteristic {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -499,7 +505,7 @@
   background-color: #ffffff;
 }
 .content-extra__value {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -531,7 +537,7 @@
 }
 .gift__description {
   position: absolute;
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -541,7 +547,7 @@
   z-index: 1;
 }
 .meal {
-  font-family: "Oswald", "Helvetica", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   width: 320px;
 }
 .meal__wrapper-description {
@@ -642,7 +648,7 @@
   list-style-type: none;
 }
 .form__text-info {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
