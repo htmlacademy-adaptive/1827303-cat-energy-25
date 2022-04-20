@@ -92,16 +92,16 @@
           <legend class="visually-hidden">Анкета кошки</legend>
           <ul class="input-info__list">
             <li class="input-info__item item-info">
-              <label for="item-info__field">Имя:*</label>
-              <input type="item-info__text" id="name-field" name="name" placeholder="барсик">
+              <label for="name-field">Имя:*</label>
+              <input class="item-info__text" type="text" id="name-field" name="name" placeholder="барсик">
             </li>
             <li class="input-info__item item-info">
-              <label for="item-info__field">Вес (кг):*</label>
-              <input type="item-info__text" id="weight-field" name="weight" placeholder="7">
+              <label for="weight-field">Вес (кг):*</label>
+              <input class="item-info__text" type="text" id="weight-field" name="weight" placeholder="7">
             </li>
             <li class="input-info__item item-info">
-              <label for="item-info__field">Возраст (лет):</label>
-              <input type="item-info__text" id="age-field" name="age" placeholder="7">
+              <label for="age-field">Возраст (лет):</label>
+              <input class="item-info__text" type="text" id="age-field" name="age" placeholder="7">
             </li>
           </ul>
         </fieldset>
@@ -125,7 +125,7 @@
         </fieldset>
 
         <fieldset class="form__contact-user contact-user contact-user--necessary">
-          <legend class="contact-user__title">Контактные данные<br>
+          <legend class="contact-user__title title title--large">Контактные данные<br>
             (владельца кота)</legend>
           <div class="contact-user__wrapper info-user">
             <label class="info-user__field" for="e-mail-field">E-mail:*</label>
@@ -139,15 +139,15 @@
         </fieldset>
 
         <fieldset class="form__comment-user comment-user comment-user--necessary">
+          <legend class="comment-user__title title title--large">Комментарий</legend>
           <div class="comment-user__wrapper">
-            <legend class="comment-user__title">Комментарий</legend>
             <textarea class="comment-user__description" cols="25" rows="8">Расскажите обо всех повадках кота</textarea>
           </div>
         </fieldset>
 
         <fieldset class="form__add-user add-user add-user--necessary">
+          <legend class="add-user__title title title--large">Дополнительно</legend>
           <div class="add-user__wrapper">
-            <legend class="add-user__title">Дополнительно</legend>
             <ul class="add-user__list">
               <li class="add-user__item">
                 <input type="checkbox" name="sweetener" id="sweetener-field" checked>
@@ -169,7 +169,7 @@
           </div>
         </fieldset>
 
-          <button class="form__link button button--send" type="button">отправить заявку</button>
+          <button class="form__link button button--main" type="button">отправить заявку</button>
 
           <p class="form__text-info">* — Обязательные поля</p>
 
@@ -177,7 +177,7 @@
 
     </section>
 
-    <section class="contacts contacts--form">
+    <section class="contacts contacts--dark">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Адрес</h2>
         <p class="contacts__offer">приглашаем к сотрудничеству дилеров!</p>

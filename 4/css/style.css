@@ -1,9 +1,16 @@
-.page__body {
+@font-face {
   font-family: "Oswald";
-  color: #000000;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 .visually-hidden {
   position: absolute;
@@ -15,19 +22,10 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-@font-face {
-  font-family: "Oswald";
-  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Oswald";
-  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+.page__body {
+  min-height: 100%;
+  color: #000000;
+  background-color: #ffffff;
 }
 .main-header {
   width: 320px;
@@ -69,6 +67,7 @@
 }
 .main-container {
   width: 320px;
+  background-color: #ffffff;
 }
 .main-container__title-wrapper {
   width: 280px;
@@ -89,7 +88,7 @@
   margin: 0 auto;
 }
 .promo__image-wrapper {
-  min-height: auto;
+  min-height: 302px;
   position: relative;
   background-image: url("../img/index/background-promo.png");
   background-position: center;
@@ -138,7 +137,11 @@
   width: 280px;
   height: 40px;
   padding: 0;
-  font-family: "Oswald";
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   color: #ffffff;
   background-color: #68b738;
   justify-content: center;
@@ -146,32 +149,17 @@
   text-decoration: none;
   border: none;
 }
-.button--promo {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-}
-.button--purchase {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-}
-.button--all {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #444444;
-  background-color: #f2f2f2;
-}
-.button--purchase-extra {
-  font-style: normal;
-  font-weight: 400;
+.button--main {
   font-size: 16px;
   line-height: 20px;
 }
-.button--change {
+.button--disabled {
+  font-size: 16px;
+  line-height: 20px;
+  color: #f2f2f2;
+  background-color: #eaeaea;
+}
+.button--transparent {
   width: 50px;
   height: 30px;
   background-color: transparent;
@@ -184,12 +172,6 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-}
-.button--send {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
 }
 .info {
   width: 320px;
@@ -204,6 +186,8 @@
   list-style-type: none;
 }
 .info__item {
+  min-height: 266px;
+  margin-bottom: 20px;
   color: #000000;
   background-color: #f2f2f2;
 }
@@ -215,7 +199,7 @@
   text-transform: uppercase;
 }
 .info__text {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -259,7 +243,7 @@
   list-style-type: none;
 }
 .benefit__text {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -269,6 +253,8 @@
 }
 .statistics {
   width: 320px;
+  display: flex;
+  flex-direction: column;
   color: #000000;
   background-color: #eaeaea;
 }
@@ -286,7 +272,7 @@
   background-color: #eaeaea;
 }
 .statistics__description {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -325,12 +311,11 @@
 }
 .contacts {
   width: 320px;
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
 }
-.contacts--catalog {
-  background-color: #f2f2f2;
-}
-.contacts--form {
+.contacts--dark {
   background-color: #f2f2f2;
 }
 .contacts__wrapper {
@@ -352,6 +337,16 @@
   line-height: 20px;
   color: #444444;
 }
+.contacts__location {
+  position: relative;
+  width: 320px;
+}
+.contacts__location::after {
+  content: url("../img/index/map-pin.png");
+  position: absolute;
+  top: 139px;
+  left: 134px;
+}
 .location {
   position: relative;
   width: 320px;
@@ -372,7 +367,7 @@
   margin: 0 auto;
 }
 .main-footer__logo-academy-name {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -388,43 +383,50 @@
 .social__link {
   text-decoration: none;
 }
-.product {
+.products {
   width: 320px;
 }
-.product__list {
+.products__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.product__item {
+.products__item {
   width: 320px;
 }
-.content__wrapper {
+.product__wrapper {
   width: 280px;
   margin: 0 auto;
 }
-.content__photo {
+.product__photo {
   object-fit: contain;
 }
-.content__title {
+.product__title {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #222222;
+  color: #444444;
   background-color: #ffffff;
 }
-.content__characteristic {
-  font-family: "Arial";
+.product__description {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.product__characteristic {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
 }
-.content__value {
-  font-family: "Arial";
+.product__value {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -452,7 +454,7 @@
   background-color: #ffffff;
 }
 .content-all__description {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -461,10 +463,10 @@
   color: #444444;
   background-color: #ffffff;
 }
-.extra-product {
+.extra-products {
   width: 320px;
 }
-.extra-product__title {
+.extra-products__title {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -473,51 +475,19 @@
   color: #000000;
   background-color: #ffffff;
 }
-.extra-product__wrapper {
+.extra-products__wrapper {
   width: 280px;
   margin: 0 auto;
 }
-.extra-product__list {
+.extra-products__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.content-extra {
-  font-family: "Oswald";
-  background-color: #ffffff;
-}
-.content-extra__title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #222222;
-}
-.content-extra__characteristic {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  color: #444444;
-  background-color: #ffffff;
-}
-.content-extra__value {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  color: #444444;
-  background-color: #ffffff;
-}
-.gift {
+.offer {
   width: 320px;
 }
-.gift__wrapper {
+.offer__wrapper {
   position: relative;
   width: 280px;
   height: 200px;
@@ -526,18 +496,18 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.gift__wrapper::after {
+.offer__wrapper::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #68b738d9;
+  background-color: rgba(104, 183, 56, 0.85);
 }
-.gift__description {
+.offer__description {
   position: absolute;
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -648,12 +618,27 @@
   list-style-type: none;
 }
 .form__text-info {
-  font-family: "Arial";
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: #000000;
+}
+.title {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+.title--small {
+  font-size: 24px;
+  line-height: 26px;
+}
+.title--large {
+  font-size: 24px;
+  line-height: 26px;
 }
 /*# sourceMappingURL=style.css.map */
