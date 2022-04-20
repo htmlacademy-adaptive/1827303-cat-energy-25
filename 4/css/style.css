@@ -26,14 +26,16 @@
   min-height: 100%;
   color: #000000;
   background-color: #ffffff;
+  margin: 0;
 }
 .main-header {
   width: 320px;
   background-color: #ffffff;
+  color: #000000;
 }
 .main-header__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .main-header__toggle {
   width: 16px;
@@ -66,12 +68,11 @@
   background-color: #ffffff;
 }
 .main-container {
-  width: 320px;
   background-color: #ffffff;
+  color: #000000;
 }
 .main-container__title-wrapper {
-  width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .main-container__title {
   font-style: normal;
@@ -82,10 +83,12 @@
 }
 .promo {
   width: 320px;
+  background-color: #ffffff;
+  color: #000000;
 }
 .promo__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .promo__image-wrapper {
   min-height: 302px;
@@ -175,10 +178,12 @@
 }
 .info {
   width: 320px;
+  background-color: #ffffff;
+  color: #000000;
 }
 .info__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .info__list {
   padding: 0;
@@ -223,10 +228,12 @@
 }
 .advantages {
   width: 320px;
+  background-color: #ffffff;
+  color: #000000;
 }
 .advantages__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .advantages__title {
   font-style: normal;
@@ -253,14 +260,12 @@
 }
 .statistics {
   width: 320px;
-  display: flex;
-  flex-direction: column;
   color: #000000;
   background-color: #eaeaea;
 }
 .statistics__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .statistics__title {
   font-style: normal;
@@ -311,16 +316,16 @@
 }
 .contacts {
   width: 320px;
-  display: flex;
-  flex-direction: column;
   background-color: #ffffff;
+  color: #000000;
 }
 .contacts--dark {
   background-color: #f2f2f2;
 }
 .contacts__wrapper {
+  display: flex;
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .contacts__offer {
   font-style: normal;
@@ -364,7 +369,7 @@
 }
 .main-footer__wrapper {
   width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 .main-footer__logo-academy-name {
   font-family: "Arial", "Helvetica", sans-serif;
