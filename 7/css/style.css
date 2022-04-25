@@ -211,7 +211,7 @@
     width: 708px;
     height: 609px;
     content: "";
-    background-image: url("../../img/index/product-tablet.png");
+    background-image: url("../img/index/product-tablet.png");
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -241,7 +241,7 @@
     width: 720px;
     height: 694px;
     padding: 0;
-    background-image: url("../../img/index/bg-promo-desktop.png");
+    background-image: url("../img/index/bg-promo-desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
@@ -261,7 +261,7 @@
     width: 552px;
     height: 499px;
     content: "";
-    background-image: url("../../img/index/product-desktop.png");
+    background-image: url("../img/index/product-desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     top: 141px;
@@ -581,13 +581,13 @@
     height: 511px;
   }
   .content-photo__item--before {
-    background-image: url("../../img/index/slider-cat-fat.png");
+    background-image: url("../img/index/slider-cat-fat.png");
     background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
   }
   .content-photo__item--after {
-    background-image: url("../../img/index/slider-cat-skinny.png");
+    background-image: url("../img/index/slider-cat-skinny.png");
     background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
@@ -644,12 +644,12 @@
   .contacts__location {
     width: 768px;
     height: 400px;
-    background-image: url("../../img/index/map-tablet.jpg");
+    background-image: url("../img/index/map-tablet.jpg");
     background-position: center;
     background-repeat: no-repeat;
   }
   .contacts__location::after {
-    content: url("../../img/index/svg/map-pin-big.svg");
+    content: url("../img/index/svg/map-pin-big.svg");
     top: 146px;
     left: 333px;
   }
@@ -676,7 +676,7 @@
   .contacts__location {
     width: 1440px;
     height: 400px;
-    background-image: url("../../img/index/map-desktop.jpg");
+    background-image: url("../img/index/map-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
   }
