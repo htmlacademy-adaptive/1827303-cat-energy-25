@@ -42,8 +42,14 @@
 .main-header__wrapper {
   width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+.main-header__wrapper-small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .main-header__toggle {
   width: 16px;
@@ -62,7 +68,7 @@
 }
 @media (min-width: 768px) {
   .main-header__wrapper {
-    width: 768px;
+    width: 708px;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
@@ -134,6 +140,7 @@
 }
 .promo__wrapper {
   width: 320px;
+  margin: 0 auto;
 }
 .promo__wrapper-title {
   min-height: 302px;
@@ -328,6 +335,7 @@
 .info__wrapper {
   width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 .info__list {
   padding: 0;
@@ -406,6 +414,7 @@
 .advantages__wrapper {
   width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 .advantages__title {
   margin: 0;
@@ -472,7 +481,6 @@
 }
 .statistics {
   position: relative;
-  width: 320px;
   display: flex;
   flex-direction: column;
   color: #000000;
@@ -481,6 +489,7 @@
 .statistics__wrapper {
   width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 .statistics__title {
   font-style: normal;
@@ -491,7 +500,6 @@
 }
 @media (min-width: 768px) {
   .statistics {
-    width: 768px;
     background-color: #ffffff;
     color: #000000;
   }
@@ -516,6 +524,7 @@
   .statistics {
     width: 1440px;
     margin: 0 auto;
+    background-color: #ffffff;
   }
   .statistics__wrapper {
     width: 1220px;
@@ -601,6 +610,7 @@
 }
 .contacts__wrapper {
   width: 320px;
+  margin: 0 auto;
 }
 .contacts__adress-wrapper {
   width: 280px;
@@ -698,11 +708,14 @@
   top: 139px;
   left: 134px;
 }
+.main-footer {
+  color: #000000;
+  background-color: #f2f2f2;
+}
 .main-footer__wrapper {
   width: 280px;
   padding: 0 20px;
-  color: #000000;
-  background-color: #f2f2f2;
+  margin: 0 auto;
 }
 .main-footer__logo-academy {
   display: flex;
@@ -715,7 +728,6 @@
   font-size: 16px;
   line-height: 18px;
   color: #444444;
-  background-color: #f2f2f2;
 }
 @media (min-width: 768px) {
   .main-footer__wrapper {
