@@ -941,6 +941,25 @@
   text-align: left;
   color: #000000;
 }
+.statistics__info-wrapper {
+  margin-bottom: 40px;
+}
+.statistics__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+.statistics__range-slider {
+  width: 210px;
+  margin: 0 auto;
+  display: flex;
+}
+.statistics__range {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 13px;
+}
 @media (min-width: 768px) {
   .statistics {
     color: #000000;
@@ -958,6 +977,32 @@
   }
   .statistics__info-wrapper {
     margin-bottom: 60px;
+  }
+  .statistics__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .statistics__item {
+    position: relative;
+    width: 296px;
+    height: 511px;
+  }
+  .statistics__item--before {
+    background-image: url("../img/index/slider-cat-fat.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .statistics__item--after {
+    background-image: url("../img/index/slider-cat-skinny.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .statistics__item-photo {
+    display: none;
+  }
+  .statistics__range-slider {
+    width: 592px;
   }
 }
 @media (min-width: 1440px) {
@@ -987,6 +1032,17 @@
   }
   .statistics__wrapper::after {
     top: 133px;
+  }
+  .statistics__list {
+    margin: 0;
+    margin-top: -246px;
+  }
+  .statistics__item-photo {
+    display: none;
+  }
+  .statistics__range-slider {
+    margin-top: -25px;
+    grid-column: 2 / 3;
   }
 }
 .statistic__description {
@@ -1103,61 +1159,6 @@
   }
   .infographic__indicator-description {
     background-color: #f2f2f2;
-  }
-}
-.content-photo__list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  margin-bottom: 15px;
-}
-.content-photo__range-slider {
-  width: 210px;
-  margin: 0 auto;
-  display: flex;
-}
-.content-photo__range {
-  display: flex;
-  flex-grow: 1;
-  margin: 0 13px;
-}
-@media (min-width: 768px) {
-  .content-photo {
-    position: relative;
-    z-index: 1;
-  }
-  .content-photo__list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-  .content-photo__item {
-    position: relative;
-    width: 296px;
-    height: 511px;
-  }
-  .content-photo__item--before {
-    background-image: url("../img/index/slider-cat-fat.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .content-photo__item--after {
-    background-image: url("../img/index/slider-cat-skinny.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .content-photo__range-slider {
-    width: 592px;
-  }
-}
-@media (min-width: 1440px) {
-  .content-photo__list {
-    margin: 0;
-    margin-top: -246px;
-  }
-  .content-photo__range-slider {
-    margin-top: -25px;
-    grid-column: 2 / 3;
   }
 }
 .contacts {
@@ -1875,16 +1876,6 @@
 .title--large {
   font-size: 24px;
   line-height: 26px;
-}
-@media (min-width: 768px) {
-  .item__photo {
-    display: none;
-  }
-}
-@media (min-width: 1440px) {
-  .item__photo {
-    display: none;
-  }
 }
 .item-info__input {
   display: flex;
