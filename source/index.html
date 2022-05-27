@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="/source/less/global/font.less" as="font">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="/source/img/favicons/icon.svg">
-  <link rel="icon" href="/source/img/favicons/apple-icon.png"> <!-- 180×180 -->
+  <link rel="icon" href="img/favicons/icon.svg">
+  <link rel="icon" href="img/favicons/apple-icon.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
@@ -63,8 +64,15 @@
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
         </div>
         <div class="promo__wrapper-product">
-          <img class="promo__product" src="img/index/promo-product.png" width="280" height="270"
-            alt="Еда для котов с курицей">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/product-desktop.webp 1x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index/product-tablet.webp 1x">
+            <source media="(min-width: 1440px)" srcset="img/index/product-desktop.png  1x">
+            <source media="(min-width: 768px)" srcset="img/index/product-tablet.png 1x">
+            <source>
+            <img class="promo__product" src="img/index/promo-product.png" width="280" height="270"
+              alt="Еда для котов с курицей">
+          </picture>
           <a class="promo__link button button--big" href="">подобрать программу</a>
         </div>
       </div>
@@ -161,9 +169,8 @@
             <li class="statistics__item statistics__item--before slider__item">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/index/webp/cat-before-tablet.webp 1x, img/index/webp/cat-before-tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/index/webp/cat-before.webp 1x, img/index/webp/cat-before@2x.webp 2x">
+                  srcset="img/index/cat-before-tablet.webp 1x, img/index/cat-before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/index/cat-before.webp 1x, img/index/cat-before@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x">
                 <img class="statistics__item-photo" src="img/index/cat-before.png"
@@ -173,9 +180,8 @@
             <li class="statistics__item statistics__item--after slider__item">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/index/webp/cat-after-tablet.webp 1x, img/index/webp/cat-after-tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/index/webp/cat-after.webp 1x, img/index/webp/cat-after@2x.webp 2x">
+                  srcset="img/index/cat-after-tablet.webp 1x, img/index/cat-after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/index/cat-after.webp 1x, img/index/cat-after@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x">
                 <img class="statistics__item-photo" src="img/index/cat-after.png" srcset="img/index/cat-after@2x.png 2x"
@@ -184,12 +190,12 @@
             </li>
           </ul>
           <div class="statistics__range-slider">
-            <button class="statistics__range-button button--transparent button--transparent-big"
+            <button class="statistics__range-button button-transparent button-transparent--big"
               type="button">было</button>
 
             <div class="statistics__range">
               <div class="statistics__range-scale">
-                <div class="statistics__range-bar" style="left: 6px; width: 35px">
+                <div class="statistics__range-bar">
                   <button class="statistics__range-toggle">
                     <span class="visually-hidden">Показать результат до/после</span>
                   </button>
@@ -197,7 +203,8 @@
               </div>
             </div>
 
-            <button class="statistics__range-button button--transparent button--transparent-big" type="button">стало</button>
+            <button class="statistics__range-button button-transparent button-transparent--big"
+              type="button">стало</button>
           </div>
         </div>
       </div>
@@ -265,8 +272,8 @@
       </div>
 
       <a class="main-footer__logo-academy" href="">
-        <svg class="main-footer__logo-academy-name" width="113" height="16" >
-          <use xlink:href="img/sprite.svg#icon-logo-academy-name"></use>
+        <svg class="main-footer__logo-academy-name" width="113" height="16">
+          <use xlink:href="img/sprite.svg#icon-html-academy-name"></use>
         </svg>
 
         <svg class="main-footer__icon-logo-academy" width="27" height="34">

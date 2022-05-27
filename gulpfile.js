@@ -26,12 +26,27 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// StylesMin
+
+const stylesMin = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true })
+  .pipe(plumber())
+  .pipe(less())
+  .pipe(postcss([
+  autoprefixer(),
+  csso()
+  ]))
+  .pipe(rename('style.min.css'))
+  .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+  .pipe(browser.stream());
+  }
+
 // Server
 
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -69,27 +84,12 @@ export const clean = () => {
 return del('build');
 };
 
-// StylesMin
-
-const stylesMin = () => {
-return gulp.src('source/less/style.less', { sourcemaps: true })
-.pipe(plumber())
-.pipe(less())
-.pipe(postcss([
-autoprefixer(),
-csso()
-]))
-.pipe(rename('style.min.css'))
-.pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-.pipe(browser.stream());
-}
-
 // SVG
 
 const svg = () =>
 gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg', '!source/img/*.svg'])
 .pipe(svgo())
-.pipe(gulp.dest('build/img/svg'));
+.pipe(gulp.dest('build/img'));
 
 const sprite = () => {
 return gulp.src('source/img/icons/*.svg')
@@ -98,7 +98,7 @@ return gulp.src('source/img/icons/*.svg')
 inlineSvg: true
 }))
 .pipe(rename('sprite.svg'))
-.pipe(gulp.dest('build/img/sprite'));
+.pipe(gulp.dest('build/img'));
 }
 
 // Images
@@ -135,8 +135,7 @@ stylesMin,
 svg,
 sprite,
 createWebp
-),
-);
+));
 
 // Default
 
@@ -148,6 +147,7 @@ gulp.parallel(
 stylesMin,
 svg,
 sprite,
+createWebp
 ),
 gulp.series(
 server,
