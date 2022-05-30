@@ -8,6 +8,13 @@
   }
 }
 
+.control__input {
+  &:disabled + .control__mark,
+  &:disabled + .control__mark + .control__label {
+    opacity: 0.3;
+  }
+}
+
 .control__mark {
   position: absolute;
   left: 0;
